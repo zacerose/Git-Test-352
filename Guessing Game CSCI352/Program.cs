@@ -10,6 +10,8 @@ namespace Guessing_Game_CSCI352
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
+            Console.ReadKey();
         }
     }
 }
