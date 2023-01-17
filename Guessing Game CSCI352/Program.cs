@@ -13,9 +13,16 @@ namespace Guessing_Game_CSCI352
         static void Main(string[] args)
         {
             Random rand = new Random();
+            // x is lower bounds, y is upper bounds on guessing game
+            int x, y;
+            Console.WriteLine("I am thinking of a number from x to y. What should x be? ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("What should y be (please make it larger than x) ");
+            y = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("I am thinking of a number between 0 and 100");
-            int guess_the_number = rand.Next(101);
+            // bounds from x inclusive to y inclusive
+            int guess_the_number = rand.Next(x, y + 1);
+            Console.WriteLine("I am thinking of a number from " + x + " to " + y + ".");
             Console.WriteLine("Guess the number: ");
             // arbitrary number outside of possible random generated number
             int num_guess = -5;
